@@ -1,0 +1,4 @@
+{
+  "include": ["plugins", "src", "index.ts", "alemon.*.{ts,tsx,js,jsx}"],
+  "extends": "alemonjs/config/tsconfig.json"
+}

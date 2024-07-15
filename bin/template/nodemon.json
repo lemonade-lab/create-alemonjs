@@ -1,0 +1,12 @@
+{
+  "exec": "npm run app",
+  "verbose": true,
+  "delay": 1000,
+  "restartable": "rs",
+  "watch": ["src", "index.ts", "alemon.*.{ts,tsx,js,jsx}"],
+  "env": {
+    "NODE_ENV": "development",
+    "ALEMONJS_MESSAGE": "dev"
+  },
+  "ext": "js,ts,tsx,jsx"
+}
