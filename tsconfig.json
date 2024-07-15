@@ -6,14 +6,8 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "preserveConstEnums": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "typeRoots": ["node_modules/@types"]
   },
-  "include": [
-    "bin/alemonjs.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["bin/alemonjs.ts"],
+  "exclude": ["node_modules"]
 }
