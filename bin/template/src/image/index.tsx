@@ -1,6 +1,6 @@
 import React from 'react'
 import { dirname } from 'path'
-import { Picture } from 'alemonjs'
+import { Picture } from 'react-puppeteer'
 import Hello, { PropsType } from './conponent/help'
 import { createRequire } from 'module'
 const require = createRequire(import.meta.url)
@@ -26,18 +26,19 @@ export class Image extends Picture {
    */
   createHelp(Props: PropsType) {
     // 生成 html 地址 或 html字符串
-    const Address = this.Com.create(<Hello {...Props} />, {
+    return this.screenshot({
       // html/help/help.html
       join_dir: 'help',
       html_name: `help.html`,
       // 插入
-      html_head: this.Com.render(
+      html_head: <>
+        <link href={require('../../public/output.css')} />
         <link href={require('../../public/css/help.css')} />
-      ),
+      </>,
+      html_body: <Hello {...Props} />,
       // 设置别名
       file_paths: paths
     })
-    return this.Pup.render(Address)
   }
 }
 // 初始化 图片生成对象
